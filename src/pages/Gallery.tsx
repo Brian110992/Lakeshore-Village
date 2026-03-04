@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect, useCallback } from 'react';
-import { X, ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -70,18 +70,23 @@ export default function Gallery() {
           <p className="text-xl text-graphite/70">A glimpse into the private waterfront lifestyle of Lakeshore Village.</p>
         </motion.div>
 
-        {/* YouTube Video Placeholder */}
+        {/* YouTube Video */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="max-w-4xl mx-auto mb-16 aspect-video bg-graphite/5 rounded-2xl border-2 border-dashed border-gold/30 flex flex-col items-center justify-center group hover:border-gold/50 transition-colors"
+          className="max-w-4xl mx-auto mb-16 aspect-video rounded-2xl overflow-hidden shadow-2xl border border-gold/20"
         >
-          <div className="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <Play size={40} className="text-gold fill-gold ml-1" />
-          </div>
-          <p className="text-graphite/60 font-bold text-lg">YouTube Video Placeholder</p>
-          <p className="text-sm text-graphite/40 mt-2 italic">Coming Soon</p>
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/AmQS06AKTEY?si=2kHP0rOL-RiWd_GX?rel=0&rel=0" 
+            title="YouTube video player" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen
+          ></iframe>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
