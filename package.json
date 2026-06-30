@@ -8,7 +8,8 @@
     "build": "vite build",
     "start": "node server.ts",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "deploy": "npm run build && cd dist && git init && git add -A && git commit -m \"Deploy\" && git push -f $(git -C .. config --get remote.origin.url) HEAD:deploy"
   },
   "dependencies": {
     "@fontsource/great-vibes": "^5.2.8",
