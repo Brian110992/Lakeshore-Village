@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export default function Home() {
@@ -126,4 +127,3 @@ export default function Home() {
   );
 }
 
-import { Link } from 'react-router-dom';
