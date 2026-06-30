@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-accent: "Great Vibes", cursive;
+
+  --color-graphite: #333333;
+  --color-gold: #D4AF37;
+  --color-silver: #D1D1D1;
+  --color-cloud: #f2f0e9;
+  --color-teal: #005f6b;
+}
+
+@layer base {
+  body {
+    @apply bg-cloud text-graphite font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold text-graphite;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-graphite px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-teal hover:text-white;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-graphite text-graphite px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-silver;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6;
+  }
+  
+  .input-field {
+    @apply border border-silver rounded-lg px-4 py-2 focus:outline-none focus:border-gold;
+  }
+}

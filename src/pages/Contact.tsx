@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import React, { useState } from 'react';
@@ -19,7 +20,7 @@ export default function Contact() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(import.meta.env.BASE_URL + 'contact.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -48,7 +49,7 @@ export default function Contact() {
   return (
     <div className="pt-32 pb-20 px-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
@@ -59,15 +60,15 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="card"
           >
             <h2 className="text-2xl font-bold mb-8">Send us a message</h2>
-            
+
             {status === 'success' ? (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center space-y-4"
@@ -77,7 +78,7 @@ export default function Contact() {
                 </div>
                 <h3 className="text-2xl font-bold text-emerald-900">Message Sent!</h3>
                 <p className="text-emerald-700">Thank you for reaching out. Your inquiry has been sent to our team, and we'll get back to you shortly.</p>
-                <button 
+                <button
                   onClick={() => setStatus('idle')}
                   className="btn-primary mt-4"
                 >
@@ -92,74 +93,74 @@ export default function Contact() {
                     <p className="text-sm font-medium">{errorMessage}</p>
                   </div>
                 )}
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold uppercase tracking-wider text-graphite/60">First Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="firstName"
                       required
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="input-field" 
-                      placeholder="John" 
+                      className="input-field"
+                      placeholder="John"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-sm font-semibold uppercase tracking-wider text-graphite/60">Last Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       name="lastName"
                       required
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="input-field" 
-                      placeholder="Doe" 
+                      className="input-field"
+                      placeholder="Doe"
                     />
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-semibold uppercase tracking-wider text-graphite/60">Email Address</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     name="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="input-field" 
-                    placeholder="john@example.com" 
+                    className="input-field"
+                    placeholder="john@example.com"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-semibold uppercase tracking-wider text-graphite/60">Phone Number</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="phone"
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="input-field" 
-                    placeholder="(209) 000-0000" 
+                    className="input-field"
+                    placeholder="(209) 000-0000"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-semibold uppercase tracking-wider text-graphite/60">Message</label>
-                  <textarea 
+                  <textarea
                     name="message"
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="input-field min-h-[150px]" 
-                    placeholder="How can we help you with your Lakeshore Village real estate needs?" 
+                    className="input-field min-h-[150px]"
+                    placeholder="How can we help you with your Lakeshore Village real estate needs?"
                   />
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={status === 'submitting'}
                   className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
@@ -175,7 +176,7 @@ export default function Contact() {
           </motion.div>
 
           {/* Contact Info & Map */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             className="space-y-12"

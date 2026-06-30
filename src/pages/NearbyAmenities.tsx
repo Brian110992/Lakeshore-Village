@@ -36,100 +36,100 @@ export default function NearbyAmenities() {
   ];
 
   const diningItems = [
-    { 
-      name: "Pietro's Trattoria", 
-      type: "Italian", 
-      distance: "5 mins", 
+    {
+      name: "Pietro's Trattoria",
+      type: "Italian",
+      distance: "5 mins",
       description: "A Lodi staple known for authentic Italian cuisine and a beautiful garden patio.",
       website: "https://www.pietroslodi.com/",
       address: "282 Rocky Ln, Lodi, CA 95240",
       phone: "209-368-0613"
     },
-    { 
-      name: "Appellation Lodi - Wine & Roses", 
-      type: "Fine Dining", 
-      distance: "8 mins", 
+    {
+      name: "Appellation Lodi - Wine & Roses",
+      type: "Fine Dining",
+      distance: "8 mins",
       description: "Award-winning dining experience set within a luxury resort and spa.",
       website: "https://www.appellationhotels.com/hotels/california-lodi/",
       address: "2505 W Turner Rd, Lodi, CA 95242",
       phone: "209-334-6988"
     },
-    { 
-      name: "Lodi Beer Co.", 
-      type: "Brewpub", 
-      distance: "10 mins", 
+    {
+      name: "Lodi Beer Co.",
+      type: "Brewpub",
+      distance: "10 mins",
       description: "Great for casual dining and locally crafted beers in a historic downtown setting.",
       website: "https://www.lodibeercompany.com/",
       address: "105 S School St, Lodi, CA 95240",
       phone: "209-368-9931"
     },
-    { 
-      name: "Dancing Fox", 
-      type: "Bakery & Bistro", 
-      distance: "10 mins", 
+    {
+      name: "Dancing Fox",
+      type: "Bakery & Bistro",
+      distance: "10 mins",
       description: "Charming spot for wood-fired pizzas, fresh bread, and local wines.",
-      website: "https://www.thedancingfox.com/",
+      website: "https://www.dancingfoxlodi.com/",
       address: "203 S School St, Lodi, CA 95240",
       phone: "209-366-2634"
     },
-    { 
-      name: "Papapavlo's Bistro & Bar", 
-      type: "Mediterranean", 
-      distance: "10 mins", 
+    {
+      name: "Papapavlo's Bistro & Bar",
+      type: "Mediterranean",
+      distance: "10 mins",
       description: "A popular bistro offering a blend of Mediterranean and Italian flavors in a sophisticated yet comfortable setting.",
       website: "https://papapavlos.com/",
       address: "217 N School St, Lodi, CA 95240",
       phone: "209-625-8611"
     },
-    { 
-      name: "Market Tavern", 
-      type: "American / Tavern", 
-      distance: "10 mins", 
+    {
+      name: "Market Tavern",
+      type: "American / Tavern",
+      distance: "10 mins",
       description: "A place where great food, good company, and local spirit come together. Celebrating the best of the Central Valley with seasonal menus, wood-fired pizzas, hand-cut steaks, and locally sourced ingredients.",
       website: "https://markettavernlodi.com/",
       address: "28 S. School St, Lodi, CA 95240",
       phone: "209-310-2485"
     },
-    { 
-      name: "Golden Ox Diner", 
-      type: "Diner / American", 
-      distance: "5 mins", 
+    {
+      name: "Golden Ox Diner",
+      type: "Diner / American",
+      distance: "5 mins",
       description: "A classic local diner serving hearty breakfast and lunch favorites in a friendly atmosphere.",
       website: "https://goldenoxlodi.com/",
       address: "410 W Kettleman Ln, Lodi, CA 95240",
       phone: "209-333-0146"
     },
-    { 
-      name: "El Pazcifico Mexican Grill & Cantina", 
-      type: "Mexican", 
-      distance: "10 mins", 
+    {
+      name: "El Pazcifico Mexican Grill & Cantina",
+      type: "Mexican",
+      distance: "10 mins",
       description: "Authentic Mexican flavors and a vibrant cantina atmosphere in the heart of downtown Lodi.",
       website: "https://elpazcifico.com/",
       address: "114 W Pine St, Lodi, CA 95240",
       phone: "209-224-8126"
     },
-    { 
-      name: "Black Bear Diner Lodi", 
-      type: "Diner / American", 
-      distance: "5 mins", 
+    {
+      name: "Black Bear Diner Lodi",
+      type: "Diner / American",
+      distance: "5 mins",
       description: "Known for its bear-themed decor and large portions of home-style comfort food.",
       website: "http://blackbeardiner.com/",
       address: "2347 W Kettleman Ln, Lodi, CA 95242",
       phone: "209-333-2200"
     },
-    { 
-      name: "Hollywood Family Café & Catering", 
-      type: "Cafe / American", 
-      distance: "10 mins", 
+    {
+      name: "Hollywood Family Café & Catering",
+      type: "Cafe / American",
+      distance: "10 mins",
       description: "A local favorite for breakfast and lunch, offering a wide variety of classic American dishes.",
       website: "http://hollywoodcafecatering.com/",
       address: "315 S Cherokee Ln, Lodi, CA 95240",
       phone: "209-369-4065"
     },
-    { 
-      name: "Richmaid Restaurant", 
-      type: "American / Diner", 
-      distance: "10 mins", 
+    {
+      name: "Richmaid Restaurant",
+      type: "American / Diner",
+      distance: "10 mins",
       description: "A historic Lodi landmark serving traditional American fare and famous for its old-school charm.",
       website: "http://www.richmaidrestaurant.com/",
       address: "100 S Cherokee Ln, Lodi, CA 95240",
@@ -138,54 +138,54 @@ export default function NearbyAmenities() {
   ];
 
   const venueItems = [
-    { 
-      name: "Elite Events Lodi", 
-      type: "Event Venue", 
+    {
+      name: "Elite Events Lodi",
+      type: "Event Venue",
       distance: "5 mins",
       description: "A premier local event venue service specializing in providing a space for creating memorable experiences for all occasions.",
       website: "https://eelodi.com/",
       address: "1420 W Kettleman Ln, Suite C, Lodi, CA 95242",
       phone: "209-227-0406"
     },
-    { 
-      name: "Oak Farm Vineyards", 
-      type: "Winery", 
+    {
+      name: "Oak Farm Vineyards",
+      type: "Winery",
       distance: "5 mins",
       description: "Stunning estate with historic oaks and elegant tasting rooms, perfect for weddings and events.",
       website: "https://www.oakfarmvineyards.com/",
       address: "23627 Devries Rd, Lodi, CA 95242",
       phone: "209-365-6565"
     },
-    { 
-      name: "Hutchins Street Square", 
-      type: "Community Center", 
+    {
+      name: "Hutchins Street Square",
+      type: "Community Center",
       distance: "10 mins",
       description: "A multi-use facility hosting concerts, theater productions, and community gatherings.",
-      website: "https://www.hutchinsstreetsquare.com/",
+      website: "https://www.lodi.gov/433/Hutchins-Street-Square",
       address: "125 S Hutchins St, Lodi, CA 95240",
       phone: "209-333-6782"
     },
-    { 
-      name: "Wine & Roses Event Center", 
-      type: "Luxury Venue", 
+    {
+      name: "Wine & Roses Event Center",
+      type: "Luxury Venue",
       distance: "8 mins",
       description: "Sophisticated spaces for large-scale events and intimate celebrations alike.",
-      website: "https://www.appellationhotels.com/hotels/california-lodi/weddings-events/",
+      website: "https://www.appellationhotels.com/hotels/california-lodi/meetings/",
       address: "2505 W Turner Rd, Lodi, CA 95242",
       phone: "209-334-6988"
     },
-    { 
-      name: "Lodi Grape Festival Grounds", 
-      type: "Fairgrounds", 
+    {
+      name: "Lodi Grape Festival Grounds",
+      type: "Fairgrounds",
       distance: "10 mins",
       description: "Host to the annual Grape Festival and various large community events throughout the year.",
       website: "https://www.grapefestival.com/",
       address: "413 E Lockeford St, Lodi, CA 95240",
       phone: "209-369-2771"
     },
-    { 
-      name: "Jessie's Grove Winery", 
-      type: "Winery / Venue", 
+    {
+      name: "Jessie's Grove Winery",
+      type: "Winery / Venue",
       distance: "12 mins",
       description: "One of Lodi's oldest estate wineries, featuring historic vines and a beautiful ranch setting, perfect for outdoor events.",
       website: "http://www.jessiesgrovewinery.com/",
@@ -195,53 +195,53 @@ export default function NearbyAmenities() {
   ];
 
   const wineryItems = [
-    { 
-      name: "Oak Farm Vineyards", 
-      type: "Winery", 
+    {
+      name: "Oak Farm Vineyards",
+      type: "Winery",
       distance: "5 mins",
       description: "A family-owned estate with a rich history, offering elegant wines in a stunning tasting room.",
       website: "https://www.oakfarmvineyards.com/",
       address: "23627 Devries Rd, Lodi, CA 95242",
       phone: "209-365-6565"
     },
-    { 
-      name: "Lodi Beer Co.", 
-      type: "Brewery", 
+    {
+      name: "Lodi Beer Co.",
+      type: "Brewery",
       distance: "10 mins",
       description: "A staple of downtown Lodi, serving award-winning craft beers and hearty pub fare.",
       website: "https://www.lodibeercompany.com/",
       address: "105 S School St, Lodi, CA 95240",
       phone: "209-368-9931"
     },
-    { 
-      name: "Michael David Winery", 
-      type: "Winery", 
+    {
+      name: "Michael David Winery",
+      type: "Winery",
       distance: "12 mins",
       description: "Famous for their bold reds and vibrant atmosphere, including a cafe and bakery.",
       website: "https://www.michaeldavidwinery.com/",
       address: "4580 CA-12, Lodi, CA 95242",
       phone: "209-368-7384"
     },
-    { 
-      name: "Five Window Beer Co.", 
-      type: "Brewery", 
+    {
+      name: "Five Window Beer Co.",
+      type: "Brewery",
       distance: "10 mins",
       description: "A modern craft brewery in downtown Lodi known for its rotating selection and great outdoor space.",
       website: "https://www.fivewindow.com/",
       address: "9 W Locust St, Lodi, CA 95240",
       phone: "209-224-8036"
     },
-    { 
-      name: "IDOL Beer Works", 
-      type: "Brewery", 
+    {
+      name: "IDOL Beer Works",
+      type: "Brewery",
       distance: "10 mins",
       description: "A unique craft brewery in downtown Lodi offering a diverse range of beers in a creative and welcoming environment.",
       website: "https://www.idolbeerworks.com/",
       address: "100 S Sacramento St, Lodi, CA 95240"
     },
-    { 
-      name: "Jessie's Grove Winery", 
-      type: "Winery", 
+    {
+      name: "Jessie's Grove Winery",
+      type: "Winery",
       distance: "12 mins",
       description: "One of Lodi's oldest estate wineries, featuring historic vines and a beautiful ranch setting.",
       website: "http://www.jessiesgrovewinery.com/",
@@ -253,7 +253,7 @@ export default function NearbyAmenities() {
   return (
     <div className="pt-32 pb-20 px-4 min-h-screen bg-cloud">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
@@ -275,9 +275,9 @@ export default function NearbyAmenities() {
               className="card group overflow-hidden text-left hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gold/30"
             >
               <div className="aspect-video overflow-hidden -mx-6 -mt-6 mb-6 relative">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
+                <img
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
@@ -306,7 +306,7 @@ export default function NearbyAmenities() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {diningItems.map((item, idx) => (
-                <motion.div 
+                <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -319,7 +319,7 @@ export default function NearbyAmenities() {
                     <span className="text-xs font-bold uppercase tracking-widest bg-silver/30 px-2 py-1 rounded text-graphite/60">{item.type}</span>
                   </div>
                   <p className="text-graphite/70 mb-4">{item.description}</p>
-                  
+
                   {item.address && (
                     <div className="mb-4 space-y-2 text-sm border-t border-silver/30 pt-4">
                       <div className="flex items-center gap-2 text-graphite/80">
@@ -359,7 +359,7 @@ export default function NearbyAmenities() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {venueItems.map((item, idx) => (
-                <motion.div 
+                <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -372,7 +372,7 @@ export default function NearbyAmenities() {
                     <span className="text-xs font-bold uppercase tracking-widest bg-silver/30 px-2 py-1 rounded text-graphite/60">{item.type}</span>
                   </div>
                   <p className="text-graphite/70 mb-4">{item.description}</p>
-                  
+
                   {item.address && (
                     <div className="mb-4 space-y-2 text-sm border-t border-silver/30 pt-4">
                       <div className="flex items-center gap-2 text-graphite/80">
@@ -411,7 +411,7 @@ export default function NearbyAmenities() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {wineryItems.map((item, idx) => (
-                <motion.div 
+                <motion.div
                   key={item.name}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -424,7 +424,7 @@ export default function NearbyAmenities() {
                     <span className="text-xs font-bold uppercase tracking-widest bg-silver/30 px-2 py-1 rounded text-graphite/60">{item.type}</span>
                   </div>
                   <p className="text-graphite/70 mb-4">{item.description}</p>
-                  
+
                   {item.address && (
                     <div className="mb-4 space-y-2 text-sm border-t border-silver/30 pt-4">
                       <div className="flex items-center gap-2 text-graphite/80">

@@ -3,6 +3,7 @@ import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
+import { Resend } from "resend";
 
 dotenv.config();
 
@@ -15,59 +16,52 @@ async function startServer() {
 
   app.use(express.json());
 
-  // Brivity Integration Route
+  // Resend Email Integration Route
   app.post("/api/contact", async (req, res) => {
     const { firstName, lastName, email, phone, message } = req.body;
-    const apiKey = process.env.BRIVITY_API_KEY;
+    const apiKey = process.env.RESEND_API_KEY;
 
     if (!apiKey) {
-      console.warn("BRIVITY_API_KEY is not set. Lead will not be sent to CRM.");
-      return res.status(200).json({ 
-        success: true, 
-        message: "Message received (Demo mode: API key missing)" 
+      console.warn("RESEND_API_KEY is not set. Email will not be sent.");
+      return res.status(200).json({
+        success: true,
+        message: "Message received (Demo mode: API key missing)"
       });
     }
 
+    const resend = new Resend(apiKey);
+
     try {
-      console.log("Attempting to send lead to Brivity...");
-      // Brivity Lead Ingestion API
-      // Common Brivity API auth format: Token token="YOUR_API_KEY"
-      const response = await fetch("https://api.brivity.com/v1/leads", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Token token="${apiKey}"`,
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          lead: {
-            first_name: firstName,
-            last_name: lastName,
-            email: email,
-            phone: phone,
-            notes: `Lakeshore Village Website Inquiry: ${message}`,
-            source: "Lakeshore Village Website",
-            type: "Buyer"
-          }
-        })
+      console.log("Attempting to send email via Resend...");
+      const { data, error } = await resend.emails.send({
+        // The sender email should ideally be a verified domain, but 
+        // onboarding@resend.dev works for testing (if the 'to' address is verified in Resend).
+        from: "Website Contact Form <onboarding@resend.dev>",
+        to: "info@thehalsteadteam.com",
+        subject: `New Lead from Lakeshore Village Website: ${firstName} ${lastName}`,
+        html: `
+          <h3>New Contact Inquiry</h3>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, '<br/>')}</p>
+        `
       });
 
-      const responseStatus = response.status;
-      const responseText = await response.text();
-
-      if (!response.ok) {
-        console.error(`Brivity API Error (Status ${responseStatus}):`, responseText);
-        return res.status(responseStatus).json({ 
-          success: false, 
-          message: `Brivity API Error: ${responseStatus}. Please check your API key and permissions.` 
+      if (error) {
+        console.error("Resend API Error:", error);
+        return res.status(500).json({
+          success: false,
+          message: `Resend API Error: ${error.message}`
         });
       }
 
-      console.log("Lead successfully sent to Brivity.");
-      res.status(200).json({ success: true, message: "Lead successfully sent to Brivity" });
+      console.log("Email successfully sent via Resend.");
+      res.status(200).json({ success: true, message: "Email successfully sent" });
     } catch (error) {
       console.error("Contact Form System Error:", error);
-      res.status(500).json({ success: false, message: "A system error occurred while connecting to the CRM." });
+      res.status(500).json({ success: false, message: "A system error occurred while sending the email." });
     }
   });
 
