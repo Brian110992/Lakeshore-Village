@@ -139,15 +139,6 @@ export default function NearbyAmenities() {
 
   const venueItems = [
     {
-      name: "Elite Events Lodi",
-      type: "Event Venue",
-      distance: "5 mins",
-      description: "A premier local event venue service specializing in providing a space for creating memorable experiences for all occasions.",
-      website: "https://eelodi.com/",
-      address: "1420 W Kettleman Ln, Suite C, Lodi, CA 95242",
-      phone: "209-227-0406"
-    },
-    {
       name: "Oak Farm Vineyards",
       type: "Winery",
       distance: "5 mins",
