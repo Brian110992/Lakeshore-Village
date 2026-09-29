@@ -87,7 +87,7 @@ export default function Home() {
                 
                 <div className="space-y-4">
                   <p className="text-lg leading-relaxed">
-                    <span className="font-bold">Private Recreation:</span> Unlike public lakes, Mallard Lake was designed for the exclusive use of Lakeshore Village residents. It was built to offer a serene environment for electric boating, kayaking, and catch-and-release fishing right from a homeowner's backyard.
+                    <span className="font-bold">Private Recreation:</span> Unlike public lakes, Mallard Lake was designed for the exclusive use of Lakeshore Village residential and commercial properties which have lots on the lake. It was built to offer a serene environment for electric boating, kayaking, and catch-and-release fishing right from a homeowner's backyard.
                   </p>
                   
                   <p className="text-lg leading-relaxed">
@@ -126,4 +126,3 @@ export default function Home() {
     </div>
   );
 }
-
