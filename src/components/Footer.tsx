@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="text-gold w-5 h-5 mt-1" />
-              <span>777 S Ham Ln., Suite A,<br />Lodi, CA 95242</span>
+              <span>1822 W Kettleman Lane, Suite 1A,<br />Lodi, CA 95242</span>
             </div>
           </div>
         </div>
