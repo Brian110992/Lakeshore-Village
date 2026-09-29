@@ -210,7 +210,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-bold text-lg">Office Address</p>
-                    <p className="text-graphite/70">777 S Ham Ln., Suite A,<br />Lodi, CA 95242</p>
+                    <p className="text-graphite/70">1822 W Kettleman Lane, Suite 1A,<br />Lodi, CA 95242</p>
                     <p className="text-xs mt-1 text-gold font-bold">CalDRE #01992952</p>
                   </div>
                 </div>
