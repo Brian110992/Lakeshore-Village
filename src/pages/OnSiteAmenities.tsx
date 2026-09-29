@@ -14,7 +14,7 @@ export default function OnSiteAmenities() {
     },
     {
       title: "Mallard Lake Access",
-      description: "There is no public access to Mallard Lake, only residents can use the lake for boating, paddle boarding, kayaking, and catch-and-release fishing.",
+      description: "There is no public access to Mallard Lake, only owners with lake lots can use the lake for boating, paddle boarding, kayaking, and catch-and-release fishing.",
       image: "https://lh3.googleusercontent.com/d/1rB1Oi6I0DN0FF6yyj5bmrpqtZtv56Tpe"
     }
   ];
